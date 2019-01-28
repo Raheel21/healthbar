@@ -47,8 +47,16 @@ public class Healthbar : MonoBehaviour {
     {
         if (fillAmount != content.fillAmount)
         {
-            content.fillAmount = Mathf.Lerp(content.fillAmount, fillAmount, Time.deltaTime * lerpSpeed); 
+            
+            content.fillAmount = Mathf.Lerp(content.fillAmount, fillAmount, Time.deltaTime * lerpSpeed);
+             
         }
+
+        else
+        {
+            Destroy(GameObject.FindWithTag("Heart")); 
+        }
+
     } 
 
     private float Map(float value, float inMin, float inMax, float outMin, float outMax)
