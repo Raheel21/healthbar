@@ -16,8 +16,6 @@ public class Healthbar : MonoBehaviour {
     [SerializeField]
     private Text Valuetext; 
 
-
-
     public float MaxValue { get; set; }
 
     public float Value
@@ -51,12 +49,6 @@ public class Healthbar : MonoBehaviour {
             content.fillAmount = Mathf.Lerp(content.fillAmount, fillAmount, Time.deltaTime * lerpSpeed);
              
         }
-
-        else
-        {
-            Destroy(GameObject.FindWithTag("Heart")); 
-        }
-
     } 
 
     private float Map(float value, float inMin, float inMax, float outMin, float outMax)
