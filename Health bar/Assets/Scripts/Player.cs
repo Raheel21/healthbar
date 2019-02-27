@@ -7,26 +7,36 @@ public class Player : MonoBehaviour {
     [SerializeField]
     private Stat health;
 
+    
     private void Awake()
     {
-        health.Initialize(); 
+        health.Initialize();
+
+              
     }
 
-
+    
     // Update is called once per frame
-    void Update()
+   void update()
     {
 
-     if (Input.GetKeyDown(KeyCode.S))
-        {
-            health.CurrentVal -= 10;
-        }
-
-     if (Input.GetKeyDown(KeyCode.W))
-        {
-
-            health.CurrentVal += 10; 
-        }
 
     }
-}
+
+
+
+
+
+            
+        //(Input.GetKeyDown(KeyCode.S))
+        //{
+            //health.CurrentVal -= 10;
+        //}
+
+     //if (Input.GetKeyDown(KeyCode.W))
+       // {
+
+         //   health.CurrentVal += 10; 
+        //}
+
+    }
